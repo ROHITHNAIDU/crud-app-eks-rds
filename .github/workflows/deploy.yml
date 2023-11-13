@@ -49,12 +49,12 @@ jobs:
 
       - name: Deploy Backend to EKS
         run: |
-          aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name microcrud
+          aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name my-eks-cluster
           kubectl apply -f k8s/backend-deployment.yaml
           kubectl apply -f k8s/backend-service.yaml
 
       - name: Deploy Frontend to EKS
         run: |
-          aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name microcrud
+          aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name my-eks-cluster
           kubectl apply -f k8s/frontend-deployment.yaml
           kubectl apply -f k8s/frontend-service.yaml
