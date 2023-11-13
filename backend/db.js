@@ -2,9 +2,9 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-  host: 'microcrud.cxe23sq0q6yl.ap-southeast-1.rds.amazonaws.com',
+  host: 'microcrud.ckqmwxexes0e.ap-south-1.rds.amazonaws.com',
   user: 'admin',
-  password: 'admin123',
+  password: 'mysql2023',
   database: 'crudapp',
 });
 
